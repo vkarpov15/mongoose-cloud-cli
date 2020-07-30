@@ -1,0 +1,18 @@
+{
+  "name": "mongoose-cloud-cli",
+  "version": "0.0.1",
+  "bin": {
+    "mongoose-cloud": "./server.js"
+  },
+  "dependencies": {
+    "bulk-require": "1.x",
+    "chalk": "4.x",
+    "cors": "2.8.5",
+    "express": "4.x"
+  },
+  "devDependencies": {
+    "eslint": "7.0.0",
+    "mocha": "7.1.2",
+    "mongoose": "5.x"
+  }
+}
