@@ -1,4 +1,5 @@
-#!/usr/bin/env node
+'use strict';
+
 const bodyParser = require('body-parser');
 const chalk = require('chalk');
 const cors = require('cors');
