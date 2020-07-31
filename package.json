@@ -5,10 +5,14 @@
     "mongoose-cloud": "./server.js"
   },
   "dependencies": {
+    "archetype": "0.11.3",
+    "axios": "0.19.2",
     "bulk-require": "1.x",
     "chalk": "4.x",
     "cors": "2.8.5",
-    "express": "4.x"
+    "express": "4.x",
+    "prettyjson": "1.2.1",
+    "yargs": "15.4.1"
   },
   "devDependencies": {
     "eslint": "7.0.0",
