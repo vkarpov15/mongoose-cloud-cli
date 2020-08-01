@@ -4,6 +4,7 @@
 
 const chalk = require('chalk');
 const deployment = require('./src/deployment');
+const login = require('./src/login');
 const server = require('./server');
 const yargs = require('yargs');
 
@@ -15,6 +16,16 @@ yargs.command(
   },
   argv => {
     server(argv.port);
+  });
+
+yargs.command(
+  'login',
+  'Log in to get an API key and access commands that require auth',
+  () => {},
+  () => {
+    login().catch(err => {
+      console.log(chalk.red(`Login failed: ${err.message}`));
+    });
   });
 
 yargs.command(

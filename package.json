@@ -7,10 +7,14 @@
   "dependencies": {
     "archetype": "0.11.3",
     "axios": "0.19.2",
+    "boxen": "4.2.0",
     "bulk-require": "1.x",
     "chalk": "4.x",
+    "configstore": "5.0.1",
     "cors": "2.8.5",
+    "enquirer": "2.3.6",
     "express": "4.x",
+    "firebase": "7.17.1",
     "lodash.pick": "4.4.0",
     "prettyjson": "1.2.1",
     "yargs": "15.4.1"

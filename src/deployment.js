@@ -1,11 +1,12 @@
 'use strict';
 
 const axios = require('axios');
+const chalk = require('chalk');
 const pick = require('lodash.pick');
 const prettyjson = require('prettyjson');
+const store = require('./services/store');
 
 const url = 'http://api.mongoosecloud.io/api';
-const authorization = process.env.API_KEY;
 const deploymentProps = [
   'organizationName',
   'repoName',
@@ -17,6 +18,12 @@ const deploymentProps = [
 ];
 
 module.exports = async function deployment(deploymentId) {
+  const authorization = store.get('token');
+  if (!authorization) {
+    console.log(chalk.red(`Must be logged in first, run "mongoose-cloud login"`));
+    process.exit(-1);
+  }
+
   const opts = { headers: { authorization } };
   const { deployment, logs } = await axios.get(`${url}/deployment/${deploymentId}`, opts).
     then(res => res.data);
