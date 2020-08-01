@@ -6,7 +6,15 @@ const prettyjson = require('prettyjson');
 
 const url = 'http://api.mongoosecloud.io/api';
 const authorization = process.env.API_KEY;
-const deploymentProps = ['organizationName', 'repoName', 'branch', 'status', 'urls', 'mongodb'];
+const deploymentProps = [
+  'organizationName',
+  'repoName',
+  'branch',
+  'createdAt',
+  'status',
+  'urls',
+  'mongodb'
+];
 
 module.exports = async function deployment(deploymentId) {
   const opts = { headers: { authorization } };
