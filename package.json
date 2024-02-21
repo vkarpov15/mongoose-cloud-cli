@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "archetype": "0.11.3",
-    "axios": "0.19.2",
+    "axios": "0.28.0",
     "boxen": "4.2.0",
     "bulk-require": "1.x",
     "chalk": "4.x",
